@@ -1,9 +1,7 @@
 package org.saurabh.dynamicprogramming;
 
 /**
- * Problem: Given positive integers n and k, compute nCk
- * nCk represents the number of ways of selecting k items from n items
- * The formula for nCk is given as, nCk = n! / k! x (n-k)!, where n! denotes factorial of n
+ * Problem Link: https://www.geeksforgeeks.org/binomial-coefficient-dp-9/
  *
  * @author Saurabh, Chitransh
  */
@@ -25,17 +23,6 @@ public class BinomialCoefficients {
         return result;
     }
 
-    /**
-     * DP Approach: Use the property nCk = n-1Ck + n-1Ck-1
-     * Define sub-problem: dp[i][j] = no of ways of selecting j items from i items
-     * End result = dp[n][k], so we need a 2D array of size n+1 and k+1
-     * Recurrence: dp[i][j] = dp[i-1][j] + dp[i-1][j-1]
-     *
-     * Base case:
-     *      a) dp[i][0] = 1, as no of ways of selecting 0 items from any no of items = 1
-     *      b) dp[0][j] = 0, as no of ways of selecting any no of items from 0 items = 0
-     *      c) dp[0][0] = 1, as no of ways of selecting 0 items from 0 items = 1
-     */
     public static long binomialCoefficientDP (int n, int k) {
         long[][] dp = new long[n + 1][k + 1];
 
