@@ -46,4 +46,9 @@ public class BinomialCoefficients {
 
         return dp[n][k];
     }
+
+    public static void main(String[] args) {
+        System.out.println(binomialCoefficientDP(5,3));
+        System.out.println(binomialCoefficientDP(10, 6));
+    }
 }
